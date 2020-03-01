@@ -59,17 +59,17 @@
    <fieldset id="expInfo">
       <LEGEND>Share your Experience at Red Ball Pizza</LEGEND>
    <div class="formRow">
-      <label> for="visit">Date of visit</label>
+      <label for="visit">Date of visit</label>
       <input name="visitDate" id="visit" type="date" />
    </div>
 
    <div class="formRow">
       <label for="order">Order type</label>
-      <select> name="orderType" id="order">
-         <option> value="order1>Carry out</option>
-         <option> value="order2>Delivery</option>
-         <option> value="order3>selected>Dine in</option>
-         <option> value="order4>Take 'n bake</option>
+      <select name="orderType" id="order">
+         <option value="order1">Carry out</option>
+         <option value="order2">Delivery</option>
+         <option value="order3">Dine in</option>
+         <option value="order4">Take 'n bake</option>
       </select>
    </div>
 
@@ -86,7 +86,7 @@
       <div class="formRow">
          <label>Was your order correct?</label>
          <fieldset class="optGroup">
-            <label> for="cYes"</label>
+            <label for="cYes">Yes</label>
             <input name="oCorrect" id="cYes" value="yes" type="radio" />
             <label for="cNo">No</label>
             <input name="oCorrect" id="cNo" value="no" type="radio" />
@@ -100,63 +100,101 @@
             <input name="foodHot" id="hYes" value="yes" type="radio" />
             <label for="hNo">No</label>
             <input name="foodHot" id="hNo" value="no" type="radio" />
-      </fieldset>
-      </div>
+   </fieldset>
+   </div>
+
+   <div class="formRow">
+         <label for="rangeBox">Rate the overall service<br />
+         (0=poor; 10=great)</label>
+      0
+      <input name="serviceRate" id="rangeBox" type="range"
+      value="5" step="1" min="0" max="10" />
+      10
+   </div>
+
+      <label for="commBox">Tell us more about your experience!</label>
+      <textarea name="custExp" id="commBox"></textarea>
 
       </fieldset>
-      </form>
+      
 
       <fieldset id="custInfo">
       <LEGEND>Customer Information</LEGEND>
    <div class="formRow">
-      <LABEL> for="name">Name*</LABEL>
-      <input name="custName" id="name" type="text" placeholder="first and last name" />
+      <LABEL for="name">Name*</LABEL>
+      <input name="custName" id="name" type="text" placeholder="first and last name" required />
    </div>
 
    <div class="formRow">
-      <LABEL> for="street">Street address</LABEL>
+      <LABEL for="street">Street address</LABEL>
       <input name="custStreet" id="name" type="text" />
    </div>
 
    <div class="formRow">
-      <LABEL> for="city">City</LABEL>
+      <LABEL for="city">City</LABEL>
       <input name="custCity" id="name" type="text" value="Ormond Beach" />
    </div>
 
    <div class="formRow">
-      <LABEL> for="state">State</LABEL>
+      <LABEL for="state">State</LABEL>
       <input name="custState" id="state" type="text" value="FL" />
    </div>
 
    <div class="formRow">
-      <LABEL> for="zip">Postal code</LABEL>
-      <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
+      <LABEL for="zip">Postal code</LABEL>
+      <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" 
+      pattern="^/d{5}(-\d{4})?$" />
    </div>
 
    <div class="formRow">
-      <LABEL> for="phone">Phone number</LABEL>
-      <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+      <LABEL for="phone">Phone number</LABEL>
+      <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+      pattern="^\d{10}$|^(\(\d{3}\s*?\d{3}[\s-]?\d{4}$" />
    </div>
 
    <div class="formRow">
-      <LABEL> for="mail">E-mail</LABEL>
-      <input name="custEmail" id="name" type="email" />
+      <LABEL for="mail">E-mail</LABEL>
+      <input name="custEmail" id="name" type="email" required />
    </div>
 
-   <div class="forRow">
-      <label for="Info"> where did you hear about us<br />(select all that apply)</label>
-      <select name="InfoSrc" id="info" size="5" multiple>
-      <option> value="internet">Internet</option>
-      <option> value="mag">Magazine</option>
-      <option> value="news">Newspaper</option>
-      <option> value="word">Word of Mouth</option>
-      <option> value="other">Other</option>
-   </select>
+   <div class="formRow">
+   <label for="Info"> Where did you hear about us?<br />(select all that apply)</label>
+      <select name="infoSrc" id="info" size="5" multiple>
+         <option value="internet">Internet</option>
+         <option value="mag">Magazine</option>
+         <option value="news">Newspaper</option>
+         <option value="word">Word of Mouth</option>
+         <option value="other">Other</option>
+      </select>
    </div>
 
+   <div class="formRow">
+      <label for="dish">What's your favorite dish?</label>
+      <input name="favDish" id="dish" type="text" list="dishType" />
+      <datalist id="dishType">
+         <option value="Anitasto Pizza">
+            <option value="Big Kahuna Pizza">
+               <option value="BBQ Chicken Pizza">
+                  <option value="Mediterranean Herb Pizza">
+                     <option value="Pasta Rolls">
+                        <option value="Pasta Artichoke Pizza">
+   </datalist>
+</div>
+
+   <div class="formRow">
+      <label for="dineSpin">How many times do you dine out every month?</label>
+      <input name="dineout" id="dineSpin" type="number"
+             value="1" step="1" min="0" max="20" />
+   </div>
+   
    <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
    <label for="mailCB">Add me to your mailing list for great coupons and specials</label> 
    </fieldset>
+
+   <div id="buttons">
+      <input type="submit" value="Submit My Survey"/>
+      <input type="reset" value="Cancel" />
+   </div>
    </form>
 
      
