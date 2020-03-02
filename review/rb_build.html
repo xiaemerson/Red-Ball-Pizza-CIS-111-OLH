@@ -19,51 +19,190 @@
    <title>Red Ball Pizza Build a Pizza</title>
    <link href="rb_base.css" rel="stylesheet" />
    <link href="rb_styles2.css" rel="stylesheet" />
+   <link href="rb_forms2.css" rel="stylesheet" />
+   <script rb_formsubmit2.js></script>
+
 </head>
 
 <body>
-   <header>
-      <img src="rb_logo2.png" alt="Red Ball Pizza" id="logoimg" />
-      <nav> <a id="navicon" href="#"><img src="rb_navicon2.png" alt="" /></a>
-         <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">menu</a></li>
-            <li><a href="#">directions</a></li>
-            <li><a href="#">coupons</a></li>
-            <li><a href="#">orders</a></li>
-            <li><a href="#">catering</a></li>
-            <li><a href="#">reviews</a></li>
-         </ul>
-      </nav>
-   </header>
-   <section>
-      <h1>Build your Pizza</h1>
-      <p>Everyone has their own pizza preferences. Build your special pizza
-         by selecting from the ingredients below. You can divide your pizza
-         into two regions to give your friends a wide choice of toppings
-         and flavors.</p>
-         
-   </section>
+    <header>
+        <img src="rb_logo2.png" alt="Red Ball Pizza" id="logoimg" />
+        <nav>
+            <a id="navicon" href="#"><img src="rb_navicon2.png" alt="" /></a>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">directions</a></li>
+                <li><a href="#">coupons</a></li>
+                <li><a href="#">orders</a></li>
+                <li><a href="#">catering</a></li>
+                <li><a href="#">reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Build your Pizza</h1>
+        <p>Everyone has their own pizza preferences. Build your special pizza by selecting from the ingredients below. You can divide your pizza into two regions to give your friends a wide choice of toppings and flavors.</p>
+        <form action="http://www.example.com/redball/build" method="post">
+            <div>
+                <label for="quantityBox">Quantity</label>
+                <input name="pizza Quantity" id="quantityBox" type="number"
+                       value="1" step="1" min="1" max="10"/>
+            <div>
+                <img src="rb_sizes.png" alt="pizza sizes">
+            </div>
+            <div>
+                <label for="sizeBox">Pizza Size</label>
+                <input type="range" id="sizeBox" step="2" value="14" max="16" min="10">
+            </div>
+            <div>
+                <label for="crustBox">Pizza Crust</label>
+                <select><optgroup id="crustBox">
+                  <option value="Thin">Thin</option>
+                  <option value="Thick">Thick</option>
+                  <option value="Stuffed">Stuffed</option>
+                  <option value="Pan" selected>Pan</option>
+                </optgroup></select>
+            </div>
+            <div>
+                  <input type="checkbox" name="" id="cheeseBox">
+                  <label for="cheeseBox">Double Cheese</label>
+                  <input type="checkbox" name="" id="doubleSauce" checked>
+                  <label for="cheeseBox">Double Sauce</label>
+            </div>
+            <fieldset>
+                <legend>Meat Toppings</legend>
+                <div>
+               <label for="">Location</label>
+               <img src="rb_full.png" alt="full pizza">
+                  <img src="rb_left.png" alt="full pizza">
+                  <img src="rb_right.png" alt="full pizza">
+                  <img src="rb_none.png" alt="full pizza">
+                </div>
+                <div>
+                  <label for="">Pepperoni</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+                </div>
 
-   <footer>
-      <h1>ORDER</h1>
-      <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a> <a href="#">Salads</a> <a href="#">Drinks</a> <a href="#">Desserts</a>
-      <h1>ABOUT US</h1>
-      <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a> <a href="#">School Lunches</a>
-      <h1>CUSTOMER SERVICE</h1>
-      <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a> <a href="#">FAQs</a>
-      <h1>MY ACCOUNT</h1>
-      <a href="#">Create an Account</a> <a href="#">Sign In</a> <a href="#">Order Status</a>
-      <h1>NUTRITION</h1>
-      <a href="#">Nutrition Information</a> <a href="#">Food Allergen</a> <a href="#">Gluten Free Pizza</a>
-      <h1>POLICIES</h1>
-      <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
-      <address>
+                <div>
+                  <label for="">Ham</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Pork</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Sausage</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Chicken</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+               </fieldset>
+
+               <fieldset>
+                <legend>Vegetable Toppings</legend>
+                <div>
+                  <label for="">Location</label>
+                  <img src="rb_full.png" alt="full pizza">
+                  <img src="rb_left.png" alt="full pizza">
+                  <img src="rb_right.png" alt="full pizza">
+                  <img src="rb_none.png" alt="full pizza">
+                </div>
+                <div>
+                  <label for="">Mushrooms</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Pepper</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+              </div>
+
+               <div>
+               <label for="">Onions</label>
+               <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Tomatoes</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+
+               <div>
+                  <label for="">Jalapenos</label>
+                  <input type="checkbox" name="" id="" value="full">
+                  <input type="checkbox" name="" id="" value="left">
+                  <input type="checkbox" name="" id="" value="right">
+                  <input type="checkbox" name="" id="" value="none">
+               </div>
+               </fieldset>
+
+               <div>
+                  <input type="submit" value="Add to your Order." />
+               </div>
+
+        </form>
+    </section>
+
+
+    <footer>
+        <h1>ORDER</h1>
+        <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a> <a href="#">Salads</a> <a href="#">Drinks</a> <a href="#">Desserts</a>
+
+        <h1>ABOUT US</h1>
+        <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a> <a href="#">School Lunches</a>
+        <h1>CUSTOMER SERVICE</h1>
+
+        <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a> <a href="#">FAQs</a>
+        <h1>MY ACCOUNT</h1>
+
+        <a href="#">Create an Account</a> <a href="#">Sign In</a> <a href="#">Order Status</a>
+        <h1>NUTRITION</h1>
+
+        <a href="#">Nutrition Information</a> <a href="#">Food Allergen</a> <a href="#">Gluten Free Pizza</a>
+        <h1>POLICIES</h1>
+
+        <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
+        <address>
       Red Ball Pizza <br />
       811 Beach Drive <br />
       Ormond Beach, FL  32175 <br />
       (386) 555 - 7499
       </address>
-   </footer>
+    </footer>
 </body>
+
 </html>
