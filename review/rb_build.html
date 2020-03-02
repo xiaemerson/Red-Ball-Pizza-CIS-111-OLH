@@ -55,19 +55,19 @@
                 <img src="rb_sizes.png" alt="" />
             </div>
             <div>
-                <label for="sizeBox">pizzaSize</label>
+                <label for="sizeBox">pizza Size</label>
                 <input name="pizzaSize" id="sizeBox" type="range"
                        value="14" step="2" min="10" max="16" />
             </div>
 
             <div>
                 <label for="crustBox">Pizza Crust</label>
-                <select name ="pizzaCrust" id="crustBox">
-                    <option value="Thin">Thin<option/>
-                    <option value="Thick">Thick<option/>
-                    <option value="Stuffed">Stuffed<option/>
-                    <option value="Pan">Pan<option/>
-                </select>
+                <select><optgroup id="crustBox">
+                    <option value="Thin">Thin</option>
+                    <option value="Thick">Thick</option>
+                    <option value="Stuffed">Stuffed</option>
+                    <option value="Pan" selected>Pan</option>
+                </optgroup></select>
             </div>
 
             <div>
